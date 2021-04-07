@@ -102,3 +102,9 @@ ENV/
 
 # vscode project settings
 .vscode
+
+# CIFAR download files
+cifar-10-batches-py/
+cifar-10-python.tar.gz
+model.dat
+results.csv
