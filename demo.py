@@ -27,7 +27,7 @@ class AverageMeter(object):
         self.avg = self.sum / self.count
 
 
-def train_epoch(model, loader, optimizer, epoch, n_epochs, print_freq=1):
+def train_epoch(model, loader, optimizer, epoch, n_epochs, print_freq=10):
     batch_time = AverageMeter()
     losses = AverageMeter()
     error = AverageMeter()
@@ -76,7 +76,7 @@ def train_epoch(model, loader, optimizer, epoch, n_epochs, print_freq=1):
     return batch_time.avg, losses.avg, error.avg
 
 
-def test_epoch(model, loader, print_freq=1, is_test=True):
+def test_epoch(model, loader, print_freq=10, is_test=True):
     batch_time = AverageMeter()
     losses = AverageMeter()
     error = AverageMeter()
